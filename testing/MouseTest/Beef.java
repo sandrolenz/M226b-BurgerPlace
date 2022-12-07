@@ -24,10 +24,7 @@ public class Beef extends Actor
         // locking onto selection (or not)
         if (Greenfoot.mouseDragEnded(this)) {
             if (isTouching(Plate.class)) {
-                List<Plate> plates = getWorld().getObjects(Plate.class);
-                for (Plate p : plates) {
-                    setLocation(p.getX(), p.getY());
-                }
+                setLocation(250, 313);
             } else {
                 setLocation(250,120);
             }

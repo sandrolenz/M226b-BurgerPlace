@@ -23,24 +23,4 @@ public class Ingredient extends Actor
             return false;
         }
     }
-    
-    public void resetLocation(Ingredient i) {
-        switch(i.getClass().getName()) {
-            case "Bun":
-                i.setLocation(60, 20);
-                break;
-            case "Beef":
-                i.setLocation(60, 50);
-                break;
-            case "Cheese":
-                i.setLocation(60, 80);
-                break;
-            case "Salad":
-                i.setLocation(60, 110);
-                break;
-            default:
-                i.setLocation(60, 140);
-                break;
-        }
-    }
 }

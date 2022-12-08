@@ -31,8 +31,6 @@ public class MyWorld extends World
 
         Bun bun = new Bun();
         addObject(bun, 60, 20);
-        Bun bun2 = new Bun();
-        addObject(bun2, 60, 20);
         Beef beef = new Beef();
         addObject(beef, 60, 50);
         Cheese cheese = new Cheese();

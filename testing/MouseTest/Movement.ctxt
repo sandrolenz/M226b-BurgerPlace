@@ -13,4 +13,6 @@ comment4.params=i
 comment4.target=void\ addToArray(Ingredient)
 comment5.params=
 comment5.target=Ingredient\ getLastObject()
-numComments=6
+comment6.params=i
+comment6.target=void\ refillIngredient(Ingredient)
+numComments=7

@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.List;
 
 /**
  * Write a description of class Beef here.
@@ -7,28 +6,18 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Beef extends Actor
+public class Beef extends Ingredient
 {
+    public boolean locked;
     /**
      * Act - do whatever the Beef wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
+    public void act() {
         // Add your action code here.
-        Movement.trackMouse(this);
-        lockPosition();
+        MyWorld world = (MyWorld)getWorld();
+        Movement mover = world.getMover();
+        
+        mover.trackMouse(this);
     }
-    
-    private void lockPosition() {
-        // locking onto selection (or not)
-        if (Greenfoot.mouseDragEnded(this)) {
-            if (isTouching(Plate.class)) {
-                setLocation(250, 313);
-            } else {
-                setLocation(250,120);
-            }
-        }
-    }
-    
 }

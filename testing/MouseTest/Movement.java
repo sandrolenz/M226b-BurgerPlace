@@ -1,4 +1,6 @@
 import greenfoot.*;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Write a description of class Movement here.
@@ -8,9 +10,8 @@ import greenfoot.*;
  */
 public class Movement  
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private List<Ingredient> burger = new ArrayList<Ingredient>();
+    
     /**
      * Constructor for objects of class Movement
      */
@@ -24,10 +25,45 @@ public class Movement
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public static void trackMouse(Actor actor) {
-        if (Greenfoot.mouseDragged(actor)) {
+    public void trackMouse(Ingredient i) {
+        if (Greenfoot.mouseDragged(i)) {
             MouseInfo mouse = Greenfoot.getMouseInfo();
-            actor.setLocation(mouse.getX(), mouse.getY());
+            i.setLocation(mouse.getX(), mouse.getY());
+        }
+        if (Greenfoot.mouseDragEnded(i)) {
+            lockPosition(i);
+        }
+    }
+    
+    private void lockPosition(Ingredient i) {
+        if(!i.locked) {
+            if(Greenfoot.mouseDragEnded(i)) {
+                Ingredient lastObject = getLastObject();
+                if (i.isTouching(i, Plate.class) && lastObject != null) {
+                    i.setLocation(lastObject.getX(), lastObject.getY()-21);
+                    addToArray(i);
+                    i.locked = true;
+                } else if(i.isTouching(i, Plate.class) && lastObject == null) {
+                    i.setLocation(250, 340);
+                    addToArray(i);
+                    i.locked = true;
+                } else {
+                    i.resetLocation(i);
+                }
+            }
+        }
+    }
+    
+    public void addToArray(Ingredient i) {
+        burger.add(i);
+        System.out.println(burger);
+    }
+    
+    private Ingredient getLastObject() {
+        if (burger.isEmpty()) {
+            return null;
+        } else {
+            return burger.get(burger.size()-1);
         }
     }
 }

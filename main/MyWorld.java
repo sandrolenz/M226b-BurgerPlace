@@ -1,4 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Write a description of class MyWorld here.
@@ -41,5 +43,21 @@ public class MyWorld extends World
     
     public Movement getMover() {
         return movement;
+    }
+    
+    public int getPlate(String attribute) {
+        Plate plate = getObjects(Plate.class).get(0);
+        switch(attribute) {
+            case "x":
+                return plate.getX();
+            case "y": 
+                return plate.getY();
+            case "width":
+                return plate.getImage().getWidth();
+            case "height":
+                return plate.getImage().getHeight();
+            default:
+                return 0;
+        }
     }
 }

@@ -9,4 +9,6 @@ comment2.target=void\ prepare()
 comment2.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
 comment3.params=
 comment3.target=Movement\ getMover()
-numComments=4
+comment4.params=attribute
+comment4.target=int\ getPlate(java.lang.String)
+numComments=5

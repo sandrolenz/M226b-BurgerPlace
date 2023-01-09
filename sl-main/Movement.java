@@ -44,11 +44,7 @@ public class Movement
             if(Greenfoot.mouseDragEnded(i)) {
                 Ingredient lastObject = getLastObject();
                 if (i.isTouching(i, Plate.class) && lastObject != null) {
-                    if (i.getImage().getHeight() != lastObject.getImage().getHeight()) {
-                        i.setLocation(lastObject.getX(), lastObject.getY() - i.getImage().getHeight());
-                    } else {
-                        i.setLocation(lastObject.getX(), lastObject.getY() - lastObject.getImage().getHeight());
-                    }
+                    i.setLocation(lastObject.getX(), lastObject.getY() - i.getImage().getHeight());
                     addToArray(i);
                     i.locked = true;
                 } else if(i.isTouching(i, Plate.class) && lastObject == null) {

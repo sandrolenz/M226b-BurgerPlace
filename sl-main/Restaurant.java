@@ -8,17 +8,17 @@ import java.util.ArrayList;
  * @author Sandro Lenz
  * @version 2023-01-04
  */
-public class MyWorld extends World
+public class Restaurant extends World
 {   
     private Movement movement = new Movement();
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    public MyWorld()
+    public Restaurant()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(500, 500, 1); 
+        // Create a new world with 1700x900 cells with a cell size of 1x1 pixels.
+        super(1700, 900, 1); 
         prepare();
     }
     
@@ -29,16 +29,16 @@ public class MyWorld extends World
     private void prepare()
     {        
         Plate plate = new Plate();
-        addObject(plate,250,290);
+        addObject(plate, 1300, 800);
 
         Bun bun = new Bun();
-        addObject(bun, 60, 20);
+        addObject(bun, 100, 800);
         Beef beef = new Beef();
-        addObject(beef, 60, 50);
+        addObject(beef, 250, 800);
         Cheese cheese = new Cheese();
-        addObject(cheese, 60, 80);
+        addObject(cheese, 400, 800);
         Salad salad = new Salad();
-        addObject(salad, 60, 110);
+        addObject(salad, 550, 800);
     }
     
     public Movement getMover() {

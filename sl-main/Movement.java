@@ -48,7 +48,7 @@ public class Movement
                     addToArray(i);
                     i.locked = true;
                 } else if(i.isTouching(i, Plate.class) && lastObject == null) {
-                    MyWorld world = (MyWorld)i.getWorld();
+                    Restaurant world = (Restaurant)i.getWorld();
                     int x = world.getPlate("x");
                     int y = world.getPlate("y") + ((world.getPlate("height")/2) - i.getImage().getHeight());
                     

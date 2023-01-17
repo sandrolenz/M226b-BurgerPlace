@@ -28,10 +28,12 @@ public class Movement
     public void trackMouse(Ingredient i) {
         if(!i.locked) {
             if (Greenfoot.mouseDragged(i)) {
+                i.setImage("ingredient_" + i.getClass().getName() + "_dragged.png");
+                
                 MouseInfo mouse = Greenfoot.getMouseInfo();
                 i.setLocation(mouse.getX(), mouse.getY());
                 
-                refillIngredient(i);
+                i.refill(i);
             }
             if (Greenfoot.mouseDragEnded(i)) {
                 lockPosition(i);
@@ -72,30 +74,6 @@ public class Movement
             return null;
         } else {
             return burger.get(burger.size()-1);
-        }
-    }
-    
-    private void refillIngredient(Ingredient i) {
-        switch(i.getClass().getName()) {
-            case "Bun":
-                Bun bun = new Bun();
-                i.getWorld().addObject(bun, 60, 20);
-                break;
-            case "Beef":
-                Beef beef = new Beef();
-                i.getWorld().addObject(beef, 60, 50);
-                break;
-            case "Cheese":
-                Cheese cheese = new Cheese();
-                i.getWorld().addObject(cheese, 60, 80);
-                break;
-            case "Salad":
-                Salad salad = new Salad();
-                i.getWorld().addObject(salad, 60, 110);
-                break;
-            default:
-                System.out.println("ERROR: refillIngredient() - Incorrect class received");
-                break;
         }
     }
 }

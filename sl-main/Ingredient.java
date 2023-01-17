@@ -23,4 +23,35 @@ public class Ingredient extends Actor
             return false;
         }
     }
+    
+    public void trackMovement(Ingredient i) {
+        Restaurant world = (Restaurant)getWorld();
+        Movement mover = world.getMover();
+        
+        mover.trackMouse(i);
+    }
+    
+    public void refill(Ingredient i) {
+        switch(i.getClass().getName()) {
+            case "Bun":
+                Bun bun = new Bun();
+                i.getWorld().addObject(bun, 85, 800);
+                break;
+            case "Beef":
+                Beef beef = new Beef();
+                i.getWorld().addObject(beef, 300, 805);
+                break;
+            case "Cheese":
+                Cheese cheese = new Cheese();
+                i.getWorld().addObject(cheese, 550, 800);
+                break;
+            case "Salad":
+                Salad salad = new Salad();
+                i.getWorld().addObject(salad, 740, 800);
+                break;
+            default:
+                System.out.println("ERROR: refillIngredient() - Incorrect class received");
+                break;
+        }
+    }
 }

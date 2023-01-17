@@ -15,9 +15,6 @@ public class Bun extends Ingredient
      */
     public void act() {
         // Add your action code here.
-        Restaurant world = (Restaurant)getWorld();
-        Movement mover = world.getMover();
-        
-        mover.trackMouse(this);
+        trackMovement(this);
     }
 }

@@ -29,16 +29,25 @@ public class Restaurant extends World
     private void prepare()
     {        
         Plate plate = new Plate();
-        addObject(plate, 1300, 800);
+        addObject(plate, 1200, 805);
+        Trash trash = new Trash();
+        addObject(trash, 1400, 805);
+        Bell bell = new Bell();
+        addObject(bell, 1600, 805);
+
+        Customer customer = new Customer();
+        addObject(customer,950,452);
+        SpeechBubble speechBubble = new SpeechBubble();
+        addObject(speechBubble,1250,200);
 
         Bun bun = new Bun();
-        addObject(bun, 100, 800);
+        addObject(bun, 85, 800);
         Beef beef = new Beef();
-        addObject(beef, 250, 800);
+        addObject(beef, 300, 805);
         Cheese cheese = new Cheese();
-        addObject(cheese, 400, 800);
+        addObject(cheese, 550, 800);
         Salad salad = new Salad();
-        addObject(salad, 550, 800);
+        addObject(salad, 740, 800);
     }
     
     public Movement getMover() {

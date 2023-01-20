@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Bell here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandro Lenz
+ * @version 2023-01-21
  */
 public class Bell extends Actor
 {
@@ -29,5 +29,9 @@ public class Bell extends Actor
     private void press() {
         setImage(imgPressed);
         // Greenfoot.playSound("bellRing.mp3");
+        
+        Restaurant world = (Restaurant)getWorld();
+        Customer customer = world.getObjects(Customer.class).get(0);
+        customer.checkOrder();
     }
 }

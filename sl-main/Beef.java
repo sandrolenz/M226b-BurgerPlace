@@ -9,6 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Beef extends Ingredient
 {
     public boolean locked;
+    public Beef(boolean l, boolean isSource) {
+        locked = l;
+        if(isSource) {
+            setImage("ingredient_Beef.png");
+        }
+    }
     /**
      * Act - do whatever the Beef wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

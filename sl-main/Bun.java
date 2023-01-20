@@ -9,6 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bun extends Ingredient
 {
     public boolean locked;
+    public Bun(boolean l, boolean isSource) {
+        locked = l;
+        if(isSource) {
+            setImage("ingredient_Bun.png");
+        }
+    }
     /**
      * Act - do whatever the Bun wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

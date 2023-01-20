@@ -1,9 +1,17 @@
 #BlueJ class context
 comment0.target=Customer
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Customer\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Customer\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Customer\ here.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-20\r\n
+comment1.params=speechbubble
+comment1.target=Customer(SpeechBubble)
 comment2.params=
-comment2.target=boolean\ checkOrder()
-numComments=3
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Customer\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=boolean\ checkOrder()
+comment4.params=ingredientCount
+comment4.target=void\ generateOrder(int)
+comment5.params=
+comment5.target=java.util.List\ getOrder()
+comment6.params=sb
+comment6.target=void\ displayOrder(SpeechBubble)
+numComments=7

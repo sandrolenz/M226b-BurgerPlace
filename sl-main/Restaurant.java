@@ -35,23 +35,28 @@ public class Restaurant extends World
         Bell bell = new Bell();
         addObject(bell, 1600, 805);
 
-        Customer customer = new Customer();
-        addObject(customer,950,452);
         SpeechBubble speechBubble = new SpeechBubble();
         addObject(speechBubble,1250,200);
+        Customer customer = new Customer(speechBubble);
+        addObject(customer,950,452);
 
-        Bun bun = new Bun();
+        Bun bun = new Bun(false, true);
         addObject(bun, 85, 800);
-        Beef beef = new Beef();
+        Beef beef = new Beef(false, true);
         addObject(beef, 300, 805);
-        Cheese cheese = new Cheese();
+        Cheese cheese = new Cheese(false, true);
         addObject(cheese, 550, 800);
-        Salad salad = new Salad();
+        Salad salad = new Salad(false, true);
         addObject(salad, 740, 800);
     }
     
     public Movement getMover() {
         return movement;
+    }
+    
+    public Plate getPlate() {
+        Plate plate = getObjects(Plate.class).get(0);
+        return plate;
     }
     
     public int getPlate(String attribute) {

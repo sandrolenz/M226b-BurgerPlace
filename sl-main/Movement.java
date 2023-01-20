@@ -10,7 +10,6 @@ import java.util.ArrayList;
  */
 public class Movement  
 {
-    private List<Ingredient> burger = new ArrayList<Ingredient>();
     
     /**
      * Constructor for objects of class Movement
@@ -26,7 +25,7 @@ public class Movement
      * @return     the sum of x and y 
      */
     public void trackMouse(Ingredient i) {
-        if(!i.locked) {
+        if(!i.isLocked(i)) {
             if (Greenfoot.mouseDragged(i)) {
                 i.setImage("ingredient_" + i.getClass().getName() + "_dragged.png");
                 
@@ -42,38 +41,25 @@ public class Movement
     }
     
     private void lockPosition(Ingredient i) {
-        if(!i.locked) {
+        Restaurant world = (Restaurant)i.getWorld();
+        if(!i.isLocked(i)) {
             if(Greenfoot.mouseDragEnded(i)) {
-                Ingredient lastObject = getLastObject();
+                Ingredient lastObject = world.getPlate().getLastObject();
                 if (i.isTouching(i, Plate.class) && lastObject != null) {
                     i.setLocation(lastObject.getX(), lastObject.getY() - i.getImage().getHeight());
-                    addToArray(i);
-                    i.locked = true;
+                    world.getPlate().addToArray(i);
+                    i.lock(i);
                 } else if(i.isTouching(i, Plate.class) && lastObject == null) {
-                    Restaurant world = (Restaurant)i.getWorld();
                     int x = world.getPlate("x");
                     int y = world.getPlate("y") + ((world.getPlate("height")/2) - i.getImage().getHeight());
                     
                     i.setLocation(x, y);
-                    addToArray(i);
-                    i.locked = true;
+                    world.getPlate().addToArray(i);
+                    i.lock(i);
                 } else {
-                    i.getWorld().removeObject(i);
+                    world.removeObject(i);
                 }
             }
-        }
-    }
-    
-    private void addToArray(Ingredient i) {
-        burger.add(i);
-        System.out.println(burger);
-    }
-    
-    private Ingredient getLastObject() {
-        if (burger.isEmpty()) {
-            return null;
-        } else {
-            return burger.get(burger.size()-1);
         }
     }
 }

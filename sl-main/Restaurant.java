@@ -39,6 +39,8 @@ public class Restaurant extends World
         addObject(speechBubble,1250,200);
         Customer customer = new Customer(speechBubble);
         addObject(customer,950,452);
+        MoneyJar moneyjar = new MoneyJar();
+        addObject(moneyjar,1600,620);
 
         Bun bun = new Bun(false, true);
         addObject(bun, 85, 800);

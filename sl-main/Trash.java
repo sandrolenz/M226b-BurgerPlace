@@ -26,7 +26,7 @@ public class Trash extends Actor
     }
     
     /**
-     * Clears the plate.
+     * Clears the plate & Charges for ingredients wasted.
      * @see Plate#clearPlate
      */
     private void clearPlate() {

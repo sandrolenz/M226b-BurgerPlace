@@ -61,6 +61,7 @@ public class Movement
                 } else {
                     world.removeObject(i);
                 }
+                world.addMoney(-i.getPrice(i));
             }
         }
     }

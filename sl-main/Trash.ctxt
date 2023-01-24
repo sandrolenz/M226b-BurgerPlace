@@ -9,5 +9,5 @@ comment2.target=void\ checkClick()
 comment2.text=\r\n\ Checks\ if\ the\ trash\ is\ clicked\ and\ executes\ the\ clearPlate()\ function.\r\n\ @see\ Trash\#clearPlate\r\n
 comment3.params=
 comment3.target=void\ clearPlate()
-comment3.text=\r\n\ Clears\ the\ plate.\r\n\ @see\ Plate\#clearPlate\r\n
+comment3.text=\r\n\ Clears\ the\ plate\ &\ Charges\ for\ ingredients\ wasted.\r\n\ @see\ Plate\#clearPlate\r\n
 numComments=4

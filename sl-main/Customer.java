@@ -12,6 +12,8 @@ public class Customer extends Actor
 {
     private List<String> order = new ArrayList<String>();
     private String orderString = "";
+    private int waitTime;
+    private boolean timeStopped = false;
     /**
      * Creates the customer with an assigned speechbubble and generates an order.
      * 
@@ -27,7 +29,10 @@ public class Customer extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if(!timeStopped) {
+            waitTime += 1;
+            displayTime(); 
+        }
     }
     
     /**
@@ -68,6 +73,8 @@ public class Customer extends Actor
             System.out.println("Plate: " + plate.getBurgerString());
             System.out.println("Order: " + getOrderString());
             System.out.println("match");
+            timeStopped = true;
+            pay();
             return true;
         } else {
             System.out.println("---");
@@ -105,5 +112,36 @@ public class Customer extends Actor
      */
     private void displayOrder(SpeechBubble sb) {
         sb.display(order);
+    }
+    
+    /**
+     * Pay for the burger.
+     */
+    private void pay() {
+        Restaurant world = (Restaurant)getWorld();
+        Plate plate = world.getPlate();
+        
+        double totalPrice = 1; // base price for labour
+        
+        double tip;
+        if(waitTime/10 < 120) {
+            tip = 400 / (waitTime/10);
+        } else {
+            tip = 0;
+        }
+        
+        totalPrice += plate.getIngredientPrice();
+        totalPrice += tip;
+        world.addMoney(totalPrice);
+        plate.clearPlate();
+        world.newCustomer(this);
+    }
+    
+    /**
+     * Display the time left to prepare the current burger.
+     */
+    public void displayTime() {
+        Restaurant world = (Restaurant)getWorld();
+        world.showText(waitTime/10 + ":00", 150, 50);
     }
 }

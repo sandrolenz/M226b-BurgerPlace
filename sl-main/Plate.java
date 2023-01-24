@@ -63,4 +63,16 @@ public class Plate extends Actor
         }
         burger.clear();
     }
+    
+    /**
+     * Returns the price of the burger currently on the plate.
+     * @return The price of the burger
+     */
+    public int getIngredientPrice() {
+        int price = 0;
+        for(Ingredient i : burger) {
+            price = price + i.getPrice(i);
+        }
+        return price;
+    }
 }

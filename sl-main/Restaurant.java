@@ -12,6 +12,8 @@ public class Restaurant extends World
 {   
     // Create a new Movement Object
     private Movement movement = new Movement();
+    private double money = 10;
+    private int time = 1000;
     /**
      * Constructor, Generates and prepares the world.
      */
@@ -20,6 +22,7 @@ public class Restaurant extends World
         // Create a new world with 1700x900 cells with a cell size of 1x1 pixels.
         super(1700, 900, 1); 
         prepare();
+        displayMoney();
     }
     
     /**
@@ -39,6 +42,7 @@ public class Restaurant extends World
         addObject(speechBubble,1250,200);
         Customer customer = new Customer(speechBubble);
         addObject(customer,950,452);
+        customer.displayTime();
         MoneyJar moneyjar = new MoneyJar();
         addObject(moneyjar,1600,620);
 
@@ -75,7 +79,6 @@ public class Restaurant extends World
      * @param attribute Which attribute should be returned. Accepted are: "x", "y", "width" and "height"
      * @return The selected attribute of the object
      */
-    
     public int getPlate(String attribute) {
         Plate plate = getObjects(Plate.class).get(0);
         switch(attribute) {
@@ -90,5 +93,31 @@ public class Restaurant extends World
             default:
                 return 0;
         }
+    }
+    
+    /**
+     * Update the amount of money.
+     * @param amount Amount of coins to be added, can be negative.
+     */
+    public void addMoney(double amount) {
+        money += amount;
+        displayMoney();
+    }
+    
+    /**
+     * Display the amount of money you currently have.
+     */
+    private void displayMoney() {
+        showText(money + "0", 300, 50);
+    }
+    
+    public void newCustomer(Customer c) {
+        removeObject(c);
+        
+        SpeechBubble speechBubble = new SpeechBubble();
+        addObject(speechBubble,1250,200);
+        Customer customer = new Customer(speechBubble);
+        addObject(customer,950,452);
+        customer.displayTime();
     }
 }

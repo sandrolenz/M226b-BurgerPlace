@@ -6,5 +6,5 @@ comment1.target=Cheese(boolean,\ boolean)
 comment1.text=\r\n\ Create\ the\ cheese\ ingredient.\r\n\ @param\ l\ True\ if\ the\ ingredient\ is\ locked\r\n\ @param\ isSource\ True\ if\ the\ Object\ is\ the\ source\ of\ this\ ingredient\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ T\r\n
+comment2.text=\r\n\ Act\ -\ Track\ the\ movement\r\n
 numComments=3

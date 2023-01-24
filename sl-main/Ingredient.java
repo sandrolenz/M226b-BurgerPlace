@@ -91,4 +91,25 @@ public class Ingredient extends Actor
                 break;
         }
     }
+    
+    /**
+     * Get the price for ingredients.
+     * @param ingredient The name of the ingredient you want the price of.
+     * @return The price of the specified ingredient.
+     */
+    public int getPrice(Ingredient i) {
+        switch(i.getClass().getName()) {
+            case "Bun":
+                return 0;
+            case "Beef":
+                return 2;
+            case "Cheese":
+                return 1;
+            case "Salad":
+                return 1;
+            default:
+                return 0;
+        }
+    }
 }
+

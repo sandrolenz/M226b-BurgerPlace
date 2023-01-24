@@ -28,6 +28,18 @@ public class Restaurant extends World
     {        
         Plate plate = new Plate();
         addObject(plate,650,550);
+        
+        Customer customer = new Customer();
+        addObject (customer, 1200, 400);
+        
+        Bell bell = new Bell();
+        addObject (bell, 800, 450);
+        
+        Trash trash = new Trash();
+        addObject(trash,1000,590);
+        
+        MoneyJar moneyjar = new MoneyJar();
+        addObject (moneyjar,880, 450);
 
         Bun bun = new Bun();
         addObject(bun, 180, 550);

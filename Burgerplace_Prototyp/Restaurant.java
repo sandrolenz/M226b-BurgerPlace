@@ -32,6 +32,9 @@ public class Restaurant extends World
         Customer customer = new Customer();
         addObject (customer, 1200, 400);
         
+        SpeechBubble speechbubble = new SpeechBubble();
+        addObject (speechbubble, 970, 150);
+        
         Bell bell = new Bell();
         addObject (bell, 800, 450);
         

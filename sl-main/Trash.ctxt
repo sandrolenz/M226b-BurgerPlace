@@ -1,11 +1,13 @@
 #BlueJ class context
 comment0.target=Trash
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Trash\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ trash\ bucket\ is\ used\ to\ dispose\ of\ wrong\ burgers.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-24\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Trash\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Trash\ wants\ to\ do.\ In\ this\ case,\ check\ if\ someone\ clicks\ it.\r\n
 comment2.params=
 comment2.target=void\ checkClick()
+comment2.text=\r\n\ Checks\ if\ the\ trash\ is\ clicked\ and\ executes\ the\ clearPlate()\ function.\r\n\ @see\ Trash\#clearPlate\r\n
 comment3.params=
 comment3.target=void\ clearPlate()
+comment3.text=\r\n\ Clears\ the\ plate.\r\n\ @see\ Plate\#clearPlate\r\n
 numComments=4

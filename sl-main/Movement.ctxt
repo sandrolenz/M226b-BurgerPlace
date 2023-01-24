@@ -1,12 +1,13 @@
 #BlueJ class context
 comment0.target=Movement
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Movement\ here.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
+comment0.text=\r\n\ A\ global\ helper\ class\ to\ track\ movement\ of\ ingredients.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
 comment1.params=
 comment1.target=Movement()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Movement\r\n
+comment1.text=\r\n\ Constructor\r\n
 comment2.params=i
 comment2.target=void\ trackMouse(Ingredient)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.text=\r\n\ Track\ when\ a\ specified\ ingredient\ is\ dragged,\ set\ the\ correct\ image,\ lock\ its\ position\ and\ refill\ the\ ingredient.\r\n\ @param\ \ i\ The\ ingredient\ to\ track.\r\n\ @see\ Ingredient\#refill\r\n\ @see\ Movement\#lockPosition\r\n
 comment3.params=i
 comment3.target=void\ lockPosition(Ingredient)
+comment3.text=\r\n\ Lock\ the\ position\ of\ an\ ingredient\ on\ the\ plate\ according\ to\ the\ last\ ingredient\ that\ was\ added.\r\n\ @param\ i\ The\ ingredient\ to\ lock.\r\n
 numComments=4

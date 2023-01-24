@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Write a description of class SpeechBubble here.
+ * The speechbubble used as a frame for the order.
  * 
  * @author Sandro Lenz
  * @version 2023-01-20
@@ -11,14 +11,17 @@ import java.util.ArrayList;
 public class SpeechBubble extends Actor
 {
     /**
-     * Act - do whatever the SpeechBubble wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - do whatever the SpeechBubble wants to do.
      */
     public void act()
     {
         // Add your action code here.
     }
     
+    /**
+     * Display an order.
+     * @param order An array of ingredient class names.
+     */
     public void display(List<String> order) {
         Restaurant world = (Restaurant)getWorld();
         Ingredient obj = new Bun(false, true);

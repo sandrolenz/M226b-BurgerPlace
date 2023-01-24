@@ -1,17 +1,22 @@
 #BlueJ class context
 comment0.target=Ingredient
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ingredient\ here.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
+comment0.text=\r\n\ A\ class\ to\ group\ all\ common\ methods\ of\ the\ ingredients.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Ingredient\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=i\ cls
 comment2.target=boolean\ isTouching(Ingredient,\ java.lang.Class)
+comment2.text=\r\n\ Check\ if\ an\ ingredient\ is\ touching\ an\ object\ of\ a\ class.\r\n\ @param\ i\ The\ ingredient\ to\ check\ with.\r\n\ @param\ cls\ The\ class\ to\ check\ against.\r\n\ @return\ True\ if\ the\ ingredient\ is\ touching\ the\ class.\r\n
 comment3.params=i
 comment3.target=boolean\ isLocked(Ingredient)
+comment3.text=\r\n\ Check\ if\ an\ ingredient\ is\ locked.\r\n\ @param\ i\ The\ ingredient\ to\ check.\r\n\ @return\ True\ if\ the\ ingredient\ is\ locked.\r\n
 comment4.params=i
 comment4.target=void\ lock(Ingredient)
+comment4.text=\r\n\ Lock\ an\ ingredient\r\n\ @param\ i\ The\ ingredient\ to\ lock.\r\n
 comment5.params=i
 comment5.target=void\ trackMovement(Ingredient)
+comment5.text=\r\n\ Connect\ an\ ingredient\ to\ the\ mover\ to\ track\ drag&drop.\r\n\ @param\ i\ The\ Ingredient\ that\ should\ be\ tracked.\r\n\ @see\ Movement\#trackMouse\r\n
 comment6.params=i
 comment6.target=void\ refill(Ingredient)
+comment6.text=\r\n\ "Refill"\ an\ ingredient\ when\ one\ is\ dragged\ away.\r\n\ @param\ i\ Ingredient\ to\ refill.\r\n
 numComments=7

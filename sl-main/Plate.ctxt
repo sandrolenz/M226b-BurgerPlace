@@ -1,15 +1,19 @@
 #BlueJ class context
 comment0.target=Plate
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Plate\ here.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
+comment0.text=\r\n\ The\ plate\ that\ the\ burger\ is\ prepared\ on.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Plate\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Plate\ wants\ to\ do.\ \r\n
 comment2.params=i
 comment2.target=void\ addToArray(Ingredient)
+comment2.text=\r\n\ Add\ an\ ingredient\ to\ the\ burger\ array.\r\n\ @param\ i\ The\ ingredient\ that\ should\ be\ added.\r\n
 comment3.params=
 comment3.target=Ingredient\ getLastObject()
+comment3.text=\r\n\ Get\ the\ last\ object\ of\ the\ burger\ array.\r\n\ @return\ The\ ingredient\ object\ that\ was\ last\ added.\r\n
 comment4.params=
 comment4.target=java.lang.String\ getBurgerString()
+comment4.text=\r\n\ Get\ the\ burger\ array\ as\ a\ string.\r\n\ @return\ The\ array\ as\ a\ string.\r\n
 comment5.params=
 comment5.target=void\ clearPlate()
+comment5.text=\r\n\ Remove\ all\ ingredients\ from\ the\ plate\ and\ clear\ the\ burger\ array.\r\n
 numComments=6

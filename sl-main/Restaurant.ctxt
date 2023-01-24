@@ -1,16 +1,19 @@
 #BlueJ class context
 comment0.target=Restaurant
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
+comment0.text=\r\n\ Restaurant\ is\ the\ main\ world.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
 comment1.params=
 comment1.target=Restaurant()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\r\n\ \r\n
+comment1.text=\r\n\ Constructor,\ Generates\ and\ prepares\ the\ world.\r\n
 comment2.params=
 comment2.target=void\ prepare()
 comment2.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
 comment3.params=
 comment3.target=Movement\ getMover()
+comment3.text=\r\n\ This\ method\ returns\ the\ movement\ object,\ that\ the\ actors\ can\ then\ use.\r\n\ @return\ The\ movement\ object\r\n
 comment4.params=
 comment4.target=Plate\ getPlate()
+comment4.text=\r\n\ This\ method\ returns\ the\ plate\ object,\ that\ the\ actors\ can\ then\ use.\r\n\ @return\ The\ plate\ object\r\n
 comment5.params=attribute
 comment5.target=int\ getPlate(java.lang.String)
+comment5.text=\r\n\ This\ method\ returns\ attributes\ of\ the\ plate\ object,\ that\ the\ actors\ can\ then\ use.\r\n\ @param\ attribute\ Which\ attribute\ should\ be\ returned.\ Accepted\ are\:\ "x",\ "y",\ "width"\ and\ "height"\r\n\ @return\ The\ selected\ attribute\ of\ the\ object\r\n
 numComments=6

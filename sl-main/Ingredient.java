@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Ingredient here.
+ * A class to group all common methods of the ingredients.
  * 
  * @author Sandro Lenz
  * @version 2023-01-04
@@ -14,8 +14,15 @@ public class Ingredient extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() {
+        // Add your action code here.
     }
     
+    /**
+     * Check if an ingredient is touching an object of a class.
+     * @param i The ingredient to check with.
+     * @param cls The class to check against.
+     * @return True if the ingredient is touching the class.
+     */
     public boolean isTouching(Ingredient i, Class cls) {
         if (i.isTouching(cls)) {
             return true;
@@ -24,6 +31,11 @@ public class Ingredient extends Actor
         }
     }
     
+    /**
+     * Check if an ingredient is locked.
+     * @param i The ingredient to check.
+     * @return True if the ingredient is locked.
+     */
     public boolean isLocked(Ingredient i) {
         if(i.locked) {
             return true;
@@ -32,10 +44,19 @@ public class Ingredient extends Actor
         }
     }
     
+    /**
+     * Lock an ingredient
+     * @param i The ingredient to lock.
+     */
     public void lock(Ingredient i) {
         i.locked = true;
     }
     
+    /**
+     * Connect an ingredient to the mover to track drag&drop.
+     * @param i The Ingredient that should be tracked.
+     * @see Movement#trackMouse
+     */
     public void trackMovement(Ingredient i) {
         Restaurant world = (Restaurant)getWorld();
         Movement mover = world.getMover();
@@ -43,6 +64,10 @@ public class Ingredient extends Actor
         mover.trackMouse(i);
     }
     
+    /**
+     * "Refill" an ingredient when one is dragged away.
+     * @param i Ingredient to refill.
+     */
     public void refill(Ingredient i) {
         switch(i.getClass().getName()) {
             case "Bun":

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MoneyJar here.
+ * The MoneyJar is used to indicate how much money you currently have.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandro Lenz 
+ * @version 2023-01-24
  */
 public class MoneyJar extends Actor
 {
@@ -14,8 +14,7 @@ public class MoneyJar extends Actor
     private GreenfootImage img3 = new GreenfootImage("MoneyJar_3.png");
     private GreenfootImage img4 = new GreenfootImage("MoneyJar_4.png");
     /**
-     * Act - do whatever the MoneyJar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act
      */
     public void act()
     {

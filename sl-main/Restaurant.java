@@ -3,17 +3,17 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Write a description of class MyWorld here.
+ * Restaurant is the main world.
  * 
  * @author Sandro Lenz
  * @version 2023-01-04
  */
 public class Restaurant extends World
 {   
+    // Create a new Movement Object
     private Movement movement = new Movement();
     /**
-     * Constructor for objects of class MyWorld.
-     * 
+     * Constructor, Generates and prepares the world.
      */
     public Restaurant()
     {    
@@ -52,14 +52,29 @@ public class Restaurant extends World
         addObject(salad, 740, 800);
     }
     
+    /**
+     * This method returns the movement object, that the actors can then use.
+     * @return The movement object
+     */
     public Movement getMover() {
         return movement;
     }
+    
+    /**
+     * This method returns the plate object, that the actors can then use.
+     * @return The plate object
+     */
     
     public Plate getPlate() {
         Plate plate = getObjects(Plate.class).get(0);
         return plate;
     }
+    
+    /**
+     * This method returns attributes of the plate object, that the actors can then use.
+     * @param attribute Which attribute should be returned. Accepted are: "x", "y", "width" and "height"
+     * @return The selected attribute of the object
+     */
     
     public int getPlate(String attribute) {
         Plate plate = getObjects(Plate.class).get(0);

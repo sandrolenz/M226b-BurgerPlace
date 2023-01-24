@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Salad here.
+ * The salad ingredient.
  * 
  * @author Sandro Lenz
  * @version 2023-01-04
@@ -9,6 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Salad extends Ingredient
 {
     public boolean locked;
+    /**
+     * Create the salad ingredient.
+     * @param l True if the ingredient is locked
+     * @param isSource True if the Object is the source of this ingredient
+     */
     public Salad(boolean l, boolean isSource) {
         locked = l;
         if(isSource) {
@@ -16,8 +21,7 @@ public class Salad extends Ingredient
         }
     }
     /**
-     * Act - do whatever the Salad wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - Track teh movement
      */
     public void act() {
         // Add your action code here.

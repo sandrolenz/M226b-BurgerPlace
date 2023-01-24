@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=SpeechBubble
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ SpeechBubble\ here.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-20\r\n
+comment0.text=\r\n\ The\ speechbubble\ used\ as\ a\ frame\ for\ the\ order.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-20\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ SpeechBubble\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ SpeechBubble\ wants\ to\ do.\r\n
 comment2.params=order
 comment2.target=void\ display(java.util.List)
+comment2.text=\r\n\ Display\ an\ order.\r\n\ @param\ order\ An\ array\ of\ ingredient\ class\ names.\r\n
 numComments=3

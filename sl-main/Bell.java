@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bell here.
+ * The bell is used to notify the customer that their burger is finished.
  * 
  * @author Sandro Lenz
  * @version 2023-01-21
@@ -11,8 +11,7 @@ public class Bell extends Actor
     private GreenfootImage imgDefault = new GreenfootImage("bell.png");
     private GreenfootImage imgPressed = new GreenfootImage("bell_pressed.png");
     /**
-     * Act - do whatever the Bell wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - In this case, check if someone clicks it.
      */
     public void act()
     {
@@ -20,14 +19,21 @@ public class Bell extends Actor
         checkClick();
     }
     
+    /**
+     * Checks if the bell is clicked and executes the press() function.
+     * @see Bell#press
+     */
     private void checkClick() {
         if(Greenfoot.mouseClicked(this)) {
             press();
         }
     }
 
+    /**
+     * Play a sound and give the customer the instruction to check the order
+     * @see Customer#checkOrder
+     */
     private void press() {
-        setImage(imgPressed);
         // Greenfoot.playSound("bellRing.mp3");
         
         Restaurant world = (Restaurant)getWorld();

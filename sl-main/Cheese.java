@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cheese here.
+ * The cheese ingredient.
  * 
  * @author Sandro Lenz
  * @version 2023-01-04
@@ -9,6 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cheese extends Ingredient
 {
     public boolean locked;
+    /**
+     * Create the cheese ingredient.
+     * @param l True if the ingredient is locked
+     * @param isSource True if the Object is the source of this ingredient
+     */
     public Cheese(boolean l, boolean isSource) {
         locked = l;
         if(isSource) {
@@ -16,8 +21,7 @@ public class Cheese extends Ingredient
         }
     }
     /**
-     * Act - do whatever the Cheese wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act - Track the movement
      */
     public void act() {
         // Add your action code here.

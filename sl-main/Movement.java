@@ -3,26 +3,24 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Write a description of class Movement here.
+ * A global helper class to track movement of ingredients.
  * 
  * @author Sandro Lenz
  * @version 2023-01-04
  */
 public class Movement  
 {
-    
     /**
-     * Constructor for objects of class Movement
+     * Constructor
      */
-    public Movement()
-    {
+    public Movement() {
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Track when a specified ingredient is dragged, set the correct image, lock its position and refill the ingredient.
+     * @param  i The ingredient to track.
+     * @see Ingredient#refill
+     * @see Movement#lockPosition
      */
     public void trackMouse(Ingredient i) {
         if(!i.isLocked(i)) {
@@ -40,6 +38,10 @@ public class Movement
         }
     }
     
+    /**
+     * Lock the position of an ingredient on the plate according to the last ingredient that was added.
+     * @param i The ingredient to lock.
+     */
     private void lockPosition(Ingredient i) {
         Restaurant world = (Restaurant)i.getWorld();
         if(!i.isLocked(i)) {

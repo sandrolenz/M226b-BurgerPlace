@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Customer extends Actor
 {
     private List<String> order = new ArrayList<String>();
+    private String orderString = "";
     public Customer(SpeechBubble speechbubble) {
         generateOrder(Greenfoot.getRandomNumber(3)+2);
         // System.out.println("Customer ordered: " + order);
@@ -28,16 +29,16 @@ public class Customer extends Actor
     public boolean checkOrder() {
         Restaurant world = (Restaurant)getWorld();
         Plate plate = world.getPlate();
-        if(plate.getBurgerString().toString() == order.toString()) {
+        if(plate.getBurgerString().equals(getOrderString())) {
             System.out.println("---");
-            System.out.println("Plate: " + plate.getBurgerString().toString());
-            System.out.println("Order: " + order.toString());
+            System.out.println("Plate: " + plate.getBurgerString());
+            System.out.println("Order: " + getOrderString());
             System.out.println("match");
             return true;
         } else {
             System.out.println("---");
-            System.out.println("Plate: " + plate.getBurgerString().toString());
-            System.out.println("Order: " + order.toString());
+            System.out.println("Plate: " + plate.getBurgerString());
+            System.out.println("Order: " + getOrderString());
             System.out.println("no match");
             return false;
         }
@@ -66,6 +67,14 @@ public class Customer extends Actor
     
     public List<String> getOrder() {
         return order;
+    }
+    
+    private String getOrderString() {
+        orderString = "";
+        for(String i : order) {
+            orderString = orderString + i + " ";
+        }
+        return orderString;
     }
     
     private void displayOrder(SpeechBubble sb) {

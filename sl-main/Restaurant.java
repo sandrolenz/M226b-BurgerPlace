@@ -45,7 +45,7 @@ public class Restaurant extends World
         Bun bun = new Bun(false, true);
         addObject(bun, 85, 800);
         Beef beef = new Beef(false, true);
-        addObject(beef, 300, 805);
+        addObject(beef, 325, 805);
         Cheese cheese = new Cheese(false, true);
         addObject(cheese, 550, 800);
         Salad salad = new Salad(false, true);

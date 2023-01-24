@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Plate extends Actor
 {
     private List<Ingredient> burger = new ArrayList<Ingredient>();
-    private List<String> burgerString = new ArrayList<String>();
+    private String burgerString = "";
     /**
      * Act - do whatever the Plate wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -34,11 +34,10 @@ public class Plate extends Actor
         }
     }
     
-    public List<String> getBurgerString() {
-        burgerString.clear();
-        
+    public String getBurgerString() {
+        burgerString = "";
         for(Ingredient i : burger) {
-            burgerString.add(i.getClass().getName());
+            burgerString = burgerString + i.getClass().getName() + " ";
         }
         // System.out.println(burgerString);
         return burgerString;

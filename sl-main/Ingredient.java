@@ -51,7 +51,7 @@ public class Ingredient extends Actor
                 break;
             case "Beef":
                 Beef beef = new Beef(false, true);
-                i.getWorld().addObject(beef, 300, 805);
+                i.getWorld().addObject(beef, 325, 805);
                 break;
             case "Cheese":
                 Cheese cheese = new Cheese(false, true);

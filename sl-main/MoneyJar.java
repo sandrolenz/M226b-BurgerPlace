@@ -18,6 +18,27 @@ public class MoneyJar extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        updateImage();
+    }
+    
+    private void updateImage() {
+        Restaurant world = (Restaurant)getWorld();
+        double money = world.getMoney();
+        if(money <= 10) {
+            setImage(img0);
+            return;
+        } else if(money <= 25) {
+            setImage(img1);
+            return;
+        } else if(money <= 50) {
+            setImage(img2);
+            return;
+        } else if(money <= 75) {
+            setImage(img3);
+            return;
+        } else {
+            setImage(img4);
+            return;
+        }
     }
 }

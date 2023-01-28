@@ -24,21 +24,21 @@ public class SpeechBubble extends Actor
      */
     public void display(List<String> order) {
         Restaurant world = (Restaurant)getWorld();
-        Ingredient obj = new Bun(false, true);
+        Ingredient obj = new Bun(true, false, true);
         int i = 0;
         for(String ingredient : order) {
             switch(ingredient) {
                 case "Bun":
-                    obj = new Bun(true, false);
+                    obj = new Bun(true, false, true);
                     break;
                 case "Beef":
-                    obj = new Beef(true, false);
+                    obj = new Beef(true, false, true);
                     break;
                 case "Cheese":
-                    obj = new Cheese(true, false);
+                    obj = new Cheese(true, false, true);
                     break;
                 case "Salad":
-                    obj = new Salad(true, false);
+                    obj = new Salad(true, false, true);
                     break;
                 case "default":
                     // This should never happen

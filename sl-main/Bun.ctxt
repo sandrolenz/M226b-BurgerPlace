@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Bun
 comment0.text=\r\n\ The\ bun\ ingredient.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-04\r\n
-comment1.params=l\ isSource
-comment1.target=Bun(boolean,\ boolean)
+comment1.params=l\ isSource\ isSB
+comment1.target=Bun(boolean,\ boolean,\ boolean)
 comment1.text=\r\n\ Create\ the\ Bun\ ingredient.\r\n\ @param\ l\ True\ if\ the\ ingredient\ is\ locked\r\n\ @param\ isSource\ True\ if\ the\ Object\ is\ the\ source\ of\ this\ ingredient\r\n
 comment2.params=
 comment2.target=void\ act()

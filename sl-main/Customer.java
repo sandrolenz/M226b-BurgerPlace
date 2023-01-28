@@ -125,7 +125,7 @@ public class Customer extends Actor
         
         double tip;
         if(waitTime/10 < 120) {
-            tip = 400 / (waitTime/10);
+            tip = 250 / (waitTime/10);
         } else {
             tip = 0;
         }

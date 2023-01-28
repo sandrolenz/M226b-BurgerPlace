@@ -46,13 +46,13 @@ public class Restaurant extends World
         MoneyJar moneyjar = new MoneyJar();
         addObject(moneyjar,1600,620);
 
-        Bun bun = new Bun(false, true);
+        Bun bun = new Bun(false, true, false);
         addObject(bun, 85, 800);
-        Beef beef = new Beef(false, true);
+        Beef beef = new Beef(false, true, false);
         addObject(beef, 325, 805);
-        Cheese cheese = new Cheese(false, true);
+        Cheese cheese = new Cheese(false, true, false);
         addObject(cheese, 550, 800);
-        Salad salad = new Salad(false, true);
+        Salad salad = new Salad(false, true, false);
         addObject(salad, 740, 800);
     }
     
@@ -104,6 +104,10 @@ public class Restaurant extends World
         displayMoney();
     }
     
+    public double getMoney() {
+        return money;
+    }
+    
     /**
      * Display the amount of money you currently have.
      */
@@ -113,6 +117,28 @@ public class Restaurant extends World
     
     public void newCustomer(Customer c) {
         removeObject(c);
+        SpeechBubble sb = getObjects(SpeechBubble.class).get(0);
+        removeObject(sb);
+        for(Bun bun : getObjects(Bun.class)) {
+            if(bun.isSpeechBubble) {
+                removeObject(bun);
+            }
+        }
+        for(Beef beef : getObjects(Beef.class)) {
+            if(beef.isSpeechBubble) {
+                removeObject(beef);
+            }
+        }
+        for(Cheese cheese : getObjects(Cheese.class)) {
+            if(cheese.isSpeechBubble) {
+                removeObject(cheese);
+            }
+        }
+        for(Salad salad : getObjects(Salad.class)) {
+            if(salad.isSpeechBubble) {
+                removeObject(salad);
+            }
+        }
         
         SpeechBubble speechBubble = new SpeechBubble();
         addObject(speechBubble,1250,200);

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=MainMenu
+comment0.text=\r\n\ The\ Starting\ Screen\ of\ the\ Game.\ It\ contains\ a\ few\ instructions.\r\n\ \r\n\ @author\ Sandro\ Lenz\r\n\ @version\ 2023-01-29\r\n
+comment1.params=
+comment1.target=MainMenu()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MainMenu.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Check\ if\ Enter\ key\ is\ pressed\ and\ update\ the\ world\ on\ pressing.\r\n
+numComments=3

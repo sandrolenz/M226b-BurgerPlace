@@ -37,7 +37,6 @@ public class Customer extends Actor
     
     /**
      * Generate an order using random numbers.
-     * 
      * @param ingredientCount The amount of ingredients
      */
     private void generateOrder(int ingredientCount) {
@@ -59,6 +58,14 @@ public class Customer extends Actor
             i++;
         }
         order.add("Bun");
+    }
+    
+    /**
+     * Returns how long the customer waited to get their order.
+     * @return The waitTime divided by 10, since it is displayed like that.
+     */
+    public int getWaitTime() {
+        return waitTime/10;
     }
     
     /**

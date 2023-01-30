@@ -6,5 +6,5 @@ comment1.target=MainMenu()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MainMenu.\r\n
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Check\ if\ Enter\ key\ is\ pressed\ and\ update\ the\ world\ on\ pressing.\r\n
+comment2.text=\r\n\ Check\ if\ Enter\ key\ is\ pressed\ and\ update\ the\ world\ on\ pressing.\r\n\ @see\ Restaurant\#Restaurant\r\n
 numComments=3

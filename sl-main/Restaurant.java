@@ -12,17 +12,35 @@ public class Restaurant extends World
 {   
     // Create a new Movement Object
     private Movement movement = new Movement();
-    private double money = 10;
-    private int time = 1000;
+    private double money;
+    private int daylength;
+    private int customerCount;
+    private int timeToServeTotal = 0;
+    private double timeToServeAvg = 0;
     /**
      * Constructor, Generates and prepares the world.
+     * @param m The amount of money the player has.
+     * @param cc The number of customers the player has served.
+     * @param d The lenght of an in-game day.
      */
-    public Restaurant()
-    {    
-        // Create a new world with 1700x900 cells with a cell size of 1x1 pixels.
-        super(1700, 900, 1); 
+    public Restaurant(double m, int cc, int d) {   
+        super(1700, 900, 1);
+        money = m;
+        daylength = d;
+        customerCount = cc;
         prepare();
         displayMoney();
+    }
+    
+    /**
+     * Act - In this case, count down the length of a day.
+     */
+    public void act() {
+        daylength = daylength - 1;
+        System.out.println(daylength);
+        if (daylength == 0) {
+            endGame(money, customerCount, timeToServeAvg);
+        }
     }
     
     /**
@@ -104,6 +122,10 @@ public class Restaurant extends World
         displayMoney();
     }
     
+    /**
+     * Return the amount of money the player currently has.
+     * @return The amount of money.
+     */
     public double getMoney() {
         return money;
     }
@@ -115,7 +137,15 @@ public class Restaurant extends World
         showText(money + "0", 300, 50);
     }
     
+    /**
+     * Remove the last customer and create a new one.
+     * @param c The old customer object to be deleted.
+     * @see Customer#Customer
+     * @see SpeechBubble#SpeechBubble
+     */
     public void newCustomer(Customer c) {
+        timeToServeTotal += c.getWaitTime();
+        
         removeObject(c);
         SpeechBubble sb = getObjects(SpeechBubble.class).get(0);
         removeObject(sb);
@@ -145,5 +175,26 @@ public class Restaurant extends World
         Customer customer = new Customer(speechBubble);
         addObject(customer,950,452);
         customer.displayTime();
+        customerCount += 1;
+    }
+    
+    /**
+     * Calculate how long it took to serve a customer on average.
+     * @return The average serving time.
+     */
+    private int calcTimeToServeAvg() {
+        int timeToServeAvg = timeToServeTotal / customerCount;
+        return timeToServeAvg;
+    }
+    
+    /**
+     * End the game and switch the world to MainMenu.
+     * @param money The amount of money the player has earned.
+     * @param cc The number of customers served in this session.
+     * @param tts The amount of time it took to serve each customer on average.
+     * @see EndScreen#EndScreen
+     */
+    private void endGame(double money, int cc, double tts) {
+        Greenfoot.setWorld(new EndScreen(money, cc, tts));
     }
 }

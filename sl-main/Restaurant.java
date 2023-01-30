@@ -37,7 +37,6 @@ public class Restaurant extends World
      */
     public void act() {
         daylength = daylength - 1;
-        System.out.println(daylength);
         if (daylength == 0) {
             endGame(money, customerCount, timeToServeAvg);
         }

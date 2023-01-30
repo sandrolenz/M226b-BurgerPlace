@@ -23,7 +23,7 @@ public class MainMenu extends World
      */
     public void act() {
         if(Greenfoot.isKeyDown("enter")) {
-            Greenfoot.setWorld(new Restaurant(10, 1, 5000));
+            Greenfoot.setWorld(new Restaurant(10, 1, 3000));
         }
     }
 }

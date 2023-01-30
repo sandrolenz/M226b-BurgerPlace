@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class EndScreen here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandro Lenz
+ * @version 2023-01-30
  */
 public class EndScreen extends World
 {
@@ -30,13 +30,13 @@ public class EndScreen extends World
      * Check if Enter or R key is pressed and update the world on pressing.
      */
     public void act() {
-        // Enter - Back to the main screen
-        if(Greenfoot.isKeyDown("enter")) {
+        // Escape - Back to the main screen
+        if(Greenfoot.isKeyDown("escape")) {
             Greenfoot.setWorld(new MainMenu());
         }
-        // R - Play another day
-        if(Greenfoot.isKeyDown("r")) {
-            Greenfoot.setWorld(new Restaurant(money, customerCount, 5000));
+        // Enter - Play another day
+        if(Greenfoot.isKeyDown("enter")) {
+            Greenfoot.setWorld(new Restaurant(money, customerCount, 3000));
         }
     }
 }

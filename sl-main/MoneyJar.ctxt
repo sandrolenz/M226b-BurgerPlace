@@ -6,4 +6,5 @@ comment1.target=void\ act()
 comment1.text=\r\n\ Act\r\n
 comment2.params=
 comment2.target=void\ updateImage()
+comment2.text=\r\n\ Update\ the\ image\ to\ reflect\ how\ much\ money\ the\ player\ has.\r\n
 numComments=3

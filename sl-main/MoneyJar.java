@@ -21,6 +21,9 @@ public class MoneyJar extends Actor
         updateImage();
     }
     
+    /**
+     * Update the image to reflect how much money the player has.
+     */
     private void updateImage() {
         Restaurant world = (Restaurant)getWorld();
         double money = world.getMoney();

@@ -14,7 +14,8 @@ public class Salad extends Ingredient
     /**
      * Create the salad ingredient.
      * @param l True if the ingredient is locked
-     * @param isSource True if the Object is the source of this ingredient
+     * @param isSource True if the object is the source of this ingredient
+     * @param isSB True if the object is displayed in the speechbubble
      */
     public Salad(boolean l, boolean isSource, boolean isSB) {
         locked = l;

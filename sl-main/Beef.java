@@ -14,7 +14,8 @@ public class Beef extends Ingredient
     /**
      * Create the beef ingredient.
      * @param l True if the ingredient is locked
-     * @param isSource True if the Object is the source of this ingredient
+     * @param isSource True if the object is the source of this ingredient
+     * @param isSB True if the object is displayed in the speechbubble
      */
     public Beef(boolean l, boolean isSource, boolean isSB) {
         locked = l;

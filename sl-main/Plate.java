@@ -26,7 +26,7 @@ public class Plate extends Actor
      */
     public void addToArray(Ingredient i) {
         burger.add(i);
-        System.out.println("Currently on the plate: " + burger);
+        // System.out.println("Currently on the plate: " + burger);
     }
     
     /**

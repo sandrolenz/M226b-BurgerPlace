@@ -17,7 +17,6 @@ public class Customer extends Actor
     private SpeechBubble sb;
     /**
      * Creates the customer with an assigned speechbubble and generates an order.
-     * 
      * @param speechbubble The speechbuuble object assigned to the customer.
      */
     public Customer(SpeechBubble speechbubble) {

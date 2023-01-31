@@ -16,18 +16,17 @@ public class EndScreen extends World
      * @param cc The number of customers the player has served.
      * @param tts The amount of time it took to serve each customer on average.
      */
-    public EndScreen(double m, int cc, double tts) {    
+    public EndScreen(double m, int cc) {    
         super(1700, 900, 1);
         money = m;
         customerCount = cc;
         
         showText("Today, you served " + cc + " customers.", 1200, 550);
-        showText("On average, it took you " + tts + " to serve one customer.", 1200, 570);
-        showText("You currently have $" + m + "0 in the bank.", 1200, 620);
+        showText("You currently have $" + m + "0 in the bank.", 1200, 575);
     }
     
     /**
-     * Check if Enter or R key is pressed and update the world on pressing.
+     * Check if Escape or Enter key is pressed and update the world on pressing.
      */
     public void act() {
         // Escape - Back to the main screen

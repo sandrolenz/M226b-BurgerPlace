@@ -14,15 +14,22 @@ public class EndScreen extends World
      * Constructor for objects of class EndScreen.
      * @param m The amount of money the player has.
      * @param cc The number of customers the player has served.
-     * @param tts The amount of time it took to serve each customer on average.
      */
     public EndScreen(double m, int cc) {    
         super(1700, 900, 1);
         money = m;
         customerCount = cc;
         
-        showText("Today, you served " + cc + " customers.", 1200, 550);
-        showText("You currently have $" + m + "0 in the bank.", 1200, 575);
+        if(money <= 0) {
+            setBackground("MainMenu.png");
+            showText("Unfortunately, you went bankrupt", 1200, 550);
+            showText("Reset the game to play again", 1200, 575);
+            Greenfoot.stop();
+        } else {
+            showText("The day has ended.", 1200, 520);
+            showText("Today, you served " + cc + " customers.", 1200, 550);
+            showText("You currently have $" + m + "0 in the bank.", 1200, 570);
+        }        
     }
     
     /**

@@ -83,7 +83,6 @@ public class Restaurant extends World
      * This method returns the plate object, that the actors can then use.
      * @return The plate object
      */
-    
     public Plate getPlate() {
         Plate plate = getObjects(Plate.class).get(0);
         return plate;
@@ -117,6 +116,9 @@ public class Restaurant extends World
     public void addMoney(double amount) {
         money += amount;
         displayMoney();
+        if(money <= 0) {
+            endGame(money, customerCount);
+        }
     }
     
     /**
@@ -177,7 +179,6 @@ public class Restaurant extends World
      * End the game and switch the world to MainMenu.
      * @param money The amount of money the player has earned.
      * @param cc The number of customers served in this session.
-     * @param tts The amount of time it took to serve each customer on average.
      * @see EndScreen#EndScreen
      */
     private void endGame(double money, int cc) {

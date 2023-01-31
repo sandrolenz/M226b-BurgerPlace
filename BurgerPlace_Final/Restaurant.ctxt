@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Restaurant
+comment0.text=\r\n\ BurgerPlace\ -\ Restaurant\r\n\ \r\n\ @author\ Daniel\ Fankhauser\r\n\ @version\ 1.4\r\n
+comment1.params=
+comment1.target=Restaurant()
+comment1.text=\r\n\ Constructor\ for\ preparing\ world.\r\n
+comment2.params=
+comment2.target=void\ prepare()
+comment2.text=\r\n\ This\ method\ prepares\ following\ objects\ for\ the\ simulation\ by\ \r\n\ instantiating\ them\ and\ adding\ them\ to\ the\ world.\r\n\ (plate,\ bell,\ trash,\ moneyjar,\ speechbubble,\ customer,\ and\ ingredients)\ \r\n
+comment3.params=
+comment3.target=Movement\ getMover()
+comment3.text=\r\n\ The\ "getMover"\ method\ returns\ the\ Movement\ object\ associated\ with\ this\ class.\r\n\ \r\n\ @return\ The\ Movement\ object\r\n
+comment4.params=
+comment4.target=Plate\ getPlate()
+comment4.text=\r\n\ \ The\ "getPlate"\ method\ returns\ the\ first\ Plate\ object\ in\ the\ scene.\r\n\ \ \r\n\ \ @return\ The\ first\ Plate\ object\ in\ the\ scene\r\n
+comment5.params=attribute
+comment5.target=int\ getPlate(java.lang.String)
+comment5.text=\r\n\ The\ "getPlate"\ method\ returns\ the\ specified\ attribute\ of\ a\ Plate\ object.\r\n\ @param\ attribute\ The\ attribute\ to\ be\ returned\ (either\ "x",\ "y",\ "width",\ or\ "height")\r\n\ @return\ The\ requested\ attribute\ value,\ or\ 0\ if\ the\ attribute\ is\ not\ recognized\r\n
+comment6.params=amount
+comment6.target=void\ addMoney(double)
+comment6.text=\r\n\ The\ "addMoney"\ method\ adds\ a\ specified\ amount\ to\ the\ current\ balance\ \r\n\ and\ displays\ the\ updated\ balance.\r\n\ @param\ amount\ The\ amount\ to\ be\ added\ to\ the\ current\ balance\r\n
+comment7.params=
+comment7.target=void\ displayMoney()
+comment7.text=\r\n\ Shows\ the\ money\ you\ currently\ have.\r\n
+comment8.params=c
+comment8.target=void\ newCustomer(Customer)
+numComments=9

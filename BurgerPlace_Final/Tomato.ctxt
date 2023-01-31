@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Tomato
+comment0.text=\r\n\ Tomato.\r\n\ \r\n\ @author\ Daniel\ Fankhauser\r\n\ @version\ 1.2\r\n
+comment1.params=l\ isSource
+comment1.target=Tomato(boolean,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ Tomato\ class,\ takes\ two\ booleans\ as\ input\r\n\ l\:\ determines\ if\ the\ tomato\ is\ locked\ or\ not\r\n\ isSource\:\ determines\ if\ the\ tomato\ is\ the\ source\ or\ not\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ This\ method\ updates\ the\ position\ of\ the\ Tomato\ object\ in\ the\ game\ world\ \r\n\ based\ on\ mouse\ movement.\r\n
+numComments=3

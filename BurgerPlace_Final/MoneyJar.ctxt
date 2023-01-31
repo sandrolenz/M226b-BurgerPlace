@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MoneyJar
+comment0.text=\r\n\ The\ MoneyJar\ is\ just\ a\ decorative\ place\ to\ show\ the\ earned\ money.\r\n\ \r\n\ @author\ Daniel\ Fankhauser\r\n\ @version\ 1.1\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\r\n
+numComments=2

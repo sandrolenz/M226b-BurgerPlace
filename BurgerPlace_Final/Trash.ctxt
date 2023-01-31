@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Trash
+comment0.text=\r\n\ If\ a\ Burger\ was\ made\ wrong,\ you\ can\ trash\ it\ by\ clicking\ on\ the\ Trash.\r\n\ \r\n\ @author\ Daniel\ Fankhauser\r\n\ @version\ 1.2\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ The\ method\ checks\ if\ object\ has\ been\ clicked\ on.\r\n
+comment2.params=
+comment2.target=void\ checkClick()
+comment2.text=\r\n\ Detects\ mouse\ click\ on\ Trash\ and\ clears\ the\ plate\ if\ the\ Trash\ is\ clicked.\r\n
+comment3.params=
+comment3.target=void\ clearPlate()
+comment3.text=\r\n\ Removes\ all\ ingredients\ from\ Plate\ by\ calling\ its\ clearPlate\ method.\r\n
+numComments=4

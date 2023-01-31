@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SpeechBubble
+comment0.text=\r\n\ The\ order\ will\ be\ shown\ on\ the\ SpeechBubble.\r\n\ \r\n\ @author\ Daniel\ Fankhauser\r\n\ @version\ 1.3\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ SpeechBubble\ wants\ to\ do.\r\n
+comment2.params=order
+comment2.target=void\ display(java.util.List)
+comment2.text=\r\n\ This\ method\ displays\ the\ ingredients\ of\ a\ burger\ order\ by\ adding\ instances\ \r\n\ of\ each\ ingredient\ in\ the\ "order"\ list\ as\ objects\ to\ the\ "Restaurant"\ world.\ \r\n\ The\ position\ of\ each\ ingredient\ is\ calculated\ based\ on\ its\ index\ in\ the\ "order"\ list.\r\n
+numComments=3

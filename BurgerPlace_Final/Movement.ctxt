@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Movement
+comment0.text=\r\n\ Tracks\ the\ movement\ of\ ingredients.\r\n\ \r\n\ @author\ Daniel\ Fankhauser\r\n\ @version\ 1.4\r\n
+comment1.params=
+comment1.target=Movement()
+comment1.text=\r\n\ The\ Constructor.\r\n
+comment2.params=i
+comment2.target=void\ trackMouse(Ingredient)
+comment2.text=\r\n\ This\ code\ tracks\ the\ movement\ of\ an\ "Ingredient"\ object\ when\ it\ is\ being\ \r\n\ dragged\ by\ the\ mouse.\ \r\n\ If\ the\ mouse\ is\ dragged\ over\ the\ object,\ the\ image\ of\ the\ object\ \r\n\ changes\ and\ its\ location\ is\ updated\ to\ match\ the\ mouse\ position.\ \r\n\ If\ the\ mouse\ drag\ ends,\ the\ object's\ position\ is\ locked.\r\n
+comment3.params=i
+comment3.target=void\ lockPosition(Ingredient)
+comment3.text=\r\n\ This\ method\ locks\ the\ position\ of\ an\ "Ingredient"\ object\ in\ a\ "Plate"\ or\ \r\n\ removes\ it\ from\ the\ world\ if\ not\ in\ contact\ with\ Plate.\ \r\n\ \r\n\ It\ uses\ mouse\ drag\ and\ drop\ events\ to\ determine\ the\ position\ of\ the\ \r\n\ "Ingredient"\ and\ sets\ its\ location\ accordingly.\ \r\n\ \r\n\ If\ it\ is\ in\ contact\ with\ the\ "Plate",\ it\ is\ added\ to\ the\ "Plate"'s\ \r\n\ ingredient\ list\ and\ locked.\r\n
+numComments=4

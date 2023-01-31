@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Bell
+comment0.text=\r\n\ The\ bell\ declares\ that\ a\ burger\ is\ finnished\ and\ it\ will\ be\ taken\ away\ by\ the\ customer.\r\n\ \r\n\ @author\ Daniel\ Fankhauser\r\n\ @version\ 1,3\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ In\ this\ case,\ check\ if\ someone\ clicks\ it.\r\n
+comment2.params=
+comment2.target=void\ checkClick()
+comment2.text=\r\n\ The\ "checkClick"\ method\ checks\ if\ the\ mouse\ has\ clicked\ on\ the\ "bell"\ object.\r\n\ If\ the\ "bell"\ has\ been\ clicked,\ the\ "press"\ method\ is\ called.\r\n
+comment3.params=
+comment3.target=void\ press()
+comment3.text=\r\n\ The\ "press"\ method\ retrieves\ the\ Customer\ object\ and\ calls\ its\ "checkOrder"\ method.\r\n
+numComments=4

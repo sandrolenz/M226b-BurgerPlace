@@ -10,6 +10,7 @@ public class Cheese extends Ingredient
 {
     public boolean locked;
     public boolean isSpeechBubble;
+    public boolean dragStarted;
     /**
      * Create the cheese ingredient.
      * @param l True if the ingredient is locked

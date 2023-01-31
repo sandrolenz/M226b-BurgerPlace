@@ -10,6 +10,7 @@ public class Salad extends Ingredient
 {
     public boolean locked;
     public boolean isSpeechBubble;
+    public boolean dragStarted;
     /**
      * Create the salad ingredient.
      * @param l True if the ingredient is locked

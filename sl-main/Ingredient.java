@@ -10,6 +10,7 @@ public class Ingredient extends Actor
 {
     public boolean locked;
     public boolean isSpeechBubble;
+    public boolean dragStarted;
     /**
      * Act - do whatever the Ingredient wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

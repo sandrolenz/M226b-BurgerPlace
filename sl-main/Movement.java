@@ -25,12 +25,14 @@ public class Movement
     public void trackMouse(Ingredient i) {
         if(!i.isLocked(i)) {
             if (Greenfoot.mouseDragged(i)) {
+                if(i.dragStarted == false) {
+                    i.refill(i);
+                }
+                i.dragStarted = true;
                 i.setImage("ingredient_" + i.getClass().getName() + "_dragged.png");
                 
                 MouseInfo mouse = Greenfoot.getMouseInfo();
                 i.setLocation(mouse.getX(), mouse.getY());
-                
-                i.refill(i);
             }
             if (Greenfoot.mouseDragEnded(i)) {
                 lockPosition(i);

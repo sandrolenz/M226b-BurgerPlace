@@ -34,10 +34,12 @@ public class Bell extends Actor
      * @see Customer#checkOrder
      */
     private void press() {
-        // Greenfoot.playSound("bellRing.mp3");
+        setImage(imgPressed);
+        Greenfoot.playSound("bellRing.mp3");
         
         Restaurant world = (Restaurant)getWorld();
         Customer customer = world.getObjects(Customer.class).get(0);
         customer.checkOrder();
+        setImage(imgDefault);
     }
 }

@@ -14,6 +14,7 @@ public class Customer extends Actor
     private String orderString = "";
     private int waitTime;
     private boolean timeStopped = false;
+    private SpeechBubble sb;
     /**
      * Creates the customer with an assigned speechbubble and generates an order.
      * 
@@ -22,6 +23,7 @@ public class Customer extends Actor
     public Customer(SpeechBubble speechbubble) {
         generateOrder(Greenfoot.getRandomNumber(3)+2);
         // System.out.println("Customer ordered: " + order);
+        sb = speechbubble;
         displayOrder(speechbubble);
     }
     /**
@@ -76,18 +78,23 @@ public class Customer extends Actor
         Restaurant world = (Restaurant)getWorld();
         Plate plate = world.getPlate();
         if(plate.getBurgerString().equals(getOrderString())) {
+            /*
             System.out.println("---");
             System.out.println("Plate: " + plate.getBurgerString());
             System.out.println("Order: " + getOrderString());
             System.out.println("match");
+            */
             timeStopped = true;
             pay();
             return true;
         } else {
+            /*
             System.out.println("---");
             System.out.println("Plate: " + plate.getBurgerString());
             System.out.println("Order: " + getOrderString());
             System.out.println("no match");
+            */
+            sb.setImage(false);
             return false;
         }
     }

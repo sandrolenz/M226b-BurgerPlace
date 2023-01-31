@@ -10,6 +10,8 @@ import java.util.ArrayList;
  */
 public class SpeechBubble extends Actor
 {
+    private GreenfootImage imgRed = new GreenfootImage("speechbubbleRed.png");
+    private GreenfootImage imgWhite = new GreenfootImage("speechbubble.png");
     /**
      * Act - do whatever the SpeechBubble wants to do.
      */
@@ -46,6 +48,18 @@ public class SpeechBubble extends Actor
             }
             world.addObject(obj, 1250, 250-(i*21));
             i++;
+        }
+    }
+    
+    /**
+     * Change image of bubble when order is checked
+     * @param orderCorrect false if the order doesnt match the plate.
+     */
+    public void setImage(boolean orderCorrect) {
+        if(!orderCorrect) {
+            setImage(imgRed);
+        } else {
+            setImage(imgWhite);
         }
     }
 }

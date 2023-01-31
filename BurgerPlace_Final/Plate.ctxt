@@ -15,5 +15,5 @@ comment4.target=java.lang.String\ getBurgerString()
 comment4.text=\r\n\ This\ function\ returns\ a\ string\ representation\ of\ the\ ingredients\ in\ the\ \r\n\ burger\ array.\r\n\ For\ each\ element\ in\ the\ "burger"\ array,\ it\ adds\ the\ name\ of\ the\ class\ of\ \r\n\ the\ ingredient\ to\ "burgerString".\r\n
 comment5.params=
 comment5.target=void\ clearPlate()
-comment5.text=\r\n\ This\ is\ a\ method\ that\ removes\ all\ the\ objects\ of\ class\ Ingredient\ \r\n\ (which\ are\ stored\ in\ the\ "burger"\ ArrayList)\ from\ the\ world\ and\ also\ \r\n\ clears\ the\ "burger"\ ArrayList.\ \r\n\ This\ method\ is\ used\ to\ clear\ the\ plate\ in\ the\ restaurant\ simulation.\r\n
+comment5.text=\r\n\ This\ method\ removes\ all\ the\ objects\ of\ class\ Ingredient\ \r\n\ (which\ are\ stored\ in\ the\ "burger"\ ArrayList)\ from\ the\ world\ and\ also\ \r\n\ clears\ the\ "burger"\ ArrayList.\ \r\n\ This\ method\ is\ used\ to\ clear\ the\ plate\ in\ the\ restaurant\ simulation.\r\n
 numComments=6

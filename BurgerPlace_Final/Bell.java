@@ -18,6 +18,11 @@ public class Bell extends Actor
         checkClick();
     }
     
+    public void play()
+    {
+        Greenfoot.playSound("bell.wav");
+    }
+    
     /**
      * The "checkClick" method checks if the mouse has clicked on the "bell" object.
      * If the "bell" has been clicked, the "press" method is called.
@@ -25,6 +30,7 @@ public class Bell extends Actor
     private void checkClick() {
         if(Greenfoot.mouseClicked(this)) {
           press();
+          play();
         }
     }
 

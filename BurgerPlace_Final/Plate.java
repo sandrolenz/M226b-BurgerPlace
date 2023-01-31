@@ -54,7 +54,7 @@ public class Plate extends Actor
     }
     
     /**
-     * This is a method that removes all the objects of class Ingredient 
+     * This method removes all the objects of class Ingredient 
      * (which are stored in the "burger" ArrayList) from the world and also 
      * clears the "burger" ArrayList. 
      * This method is used to clear the plate in the restaurant simulation.

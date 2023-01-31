@@ -18,8 +18,10 @@ public class Trash extends Actor
      * Detects mouse click on Trash and clears the plate if the Trash is clicked.
      */
     private void checkClick() {
+        Restaurant world = (Restaurant)getWorld();
         if(Greenfoot.mouseClicked(this)) {
         clearPlate();
+        world.addMoney(-3);
         }
     }
     
